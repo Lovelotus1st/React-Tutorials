@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CityForm from "./CityForm";
-import WeatherTable from "./WeatherTable";
+import CityForm from "./Weather/SearchForm";
+import WeatherTable from "./Weather/WeatherTable";
 import config from "./config";
 import "./../styles/App.css";
 
 const ApiComponent = () => {
-  const [city, setCity] = useState("");
+  const [search, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -35,7 +35,7 @@ const ApiComponent = () => {
         <h1>Weather App</h1>
       </header>
       <div className="search-bar"><section className="search-section">
-        <CityForm city={city} onCityChange={handleInputChange} />
+        <CityForm search={search} onCityChange={handleInputChange} />
       </section></div>
       <section className="table-section">
         {loading && <p>Updating...</p>}

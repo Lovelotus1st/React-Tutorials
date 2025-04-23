@@ -39,7 +39,7 @@ body {
   width: 50%; /* Set width to half of the page */
   max-width: 400px; /* Limit the maximum width */
   margin: 0 auto; /* Center-align the section */
-  margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center; /* Center-align the content inside the section */
 }
 
@@ -153,4 +153,51 @@ nav a {
 nav a:hover {
   color: #b7d1e9;
   text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #121212;
+}
+
+.movie-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  border-radius: 10px 10px 0 0;
+}
+
+.movie-card .details {
+  padding: 15px;
+}
+
+.movie-card a {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
 }

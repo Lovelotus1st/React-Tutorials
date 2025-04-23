@@ -1,5 +1,5 @@
 import React from "react";
-import "./../styles/WeatherTable.css";
+import "./../../styles/WeatherTable.css";
 
 const WeatherTable = ({ weatherData }) => {
   return (
@@ -12,7 +12,7 @@ const WeatherTable = ({ weatherData }) => {
       </thead>
       <tbody>
         <tr>
-          <td>City</td>
+          <td>Search</td>
           <td>{weatherData.location.name}</td>
         </tr>
         <tr>

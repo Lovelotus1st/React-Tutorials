@@ -1,17 +1,17 @@
 import React from "react";
 
-const CityForm = ({ city, onCityChange }) => {
+const SearchForm = ({ search, onSearchChange, placeholderText }) => {
   return (
     <form style={{ marginBottom: "20px" }}>
       <input
         type="text"
-        value={city}
-        onChange={onCityChange}
-        placeholder="Enter city name"
+        value={search}
+        onChange={onSearchChange}
+        placeholder={placeholderText}
         style={{ padding: "10px", fontSize: "16px" }}
       />
     </form>
   );
 };
 
-export default CityForm;
+export default SearchForm;
