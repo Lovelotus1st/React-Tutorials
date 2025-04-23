@@ -47,7 +47,7 @@ body {
   width: 100%; /* Make the input field take up the full width of the container */
   padding: 15px; /* Increased height for better usability */
   font-size: 18px;
-  border: 1px solid #4fc3f7; /* Cyan border */
+  border: 1px solid #5d9ebd; /* Cyan border */
   border-radius: 25px; /* Rounded corners */
   background-color: #3a3a3a; /* Dark background for input */
   color: #e0e0e0; /* Light text */
@@ -87,7 +87,7 @@ body {
 .table-section th {
   background-color: #424242; /* Dark header background */
   color: #e0e0e0; /* Light text */
-  border-bottom: 2px solid #4fc3f7; /* Cyan border for separation */
+  border-bottom: 2px solid #5d9ebd; /* Cyan border for separation */
 }
 
 .table-section td {
@@ -145,14 +145,15 @@ nav li {
 }
 
 nav a {
-  color: #2c5e75;
+  color: #5d9ebd;
   text-decoration: none;
   font-size: 18px;
+  text-decoration:none;
 }
 
 nav a:hover {
   color: #b7d1e9;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 body {
@@ -197,7 +198,7 @@ header {
 }
 
 .movie-card a {
-  color: #4fc3f7;
+  color: #5d9ebd;
   text-decoration: none;
   font-weight: bold;
 }

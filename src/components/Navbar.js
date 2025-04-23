@@ -6,12 +6,12 @@ const Navbar = () => {
     <nav style={navbarStyle}>
       <ul style={navListStyle}>
       <li style={navItemStyle}>
-          <Link to="/movies" style={linkStyle}>
+          <Link to="/movies">
             Movies
           </Link>
         </li>
         <li style={navItemStyle}>
-          <Link to="/weather" style={linkStyle}>
+          <Link to="/weather">
             Weather
           </Link>
         </li>
@@ -37,11 +37,6 @@ const navListStyle = {
 
 const navItemStyle = {
   marginRight: "20px",
-};
-
-const linkStyle = {
-  color: "#4fc3f7",
-  textDecoration: "none",
 };
 
 export default Navbar;

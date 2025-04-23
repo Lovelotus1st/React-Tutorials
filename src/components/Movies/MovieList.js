@@ -41,7 +41,7 @@ const movieCardLinkStyle = {
 textDecoration: "none",
 color: "inherit",
 ":hover": {
-    transform: "scale(1.05)", // Slightly enlarge the card on hover
+    transform: "scale(1.15)", // Slightly enlarge the card on hover
 },
 };
 
