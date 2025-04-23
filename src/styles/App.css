@@ -13,8 +13,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  margin: 25px auto;
 }
 
 /* Header styling */
@@ -33,12 +32,12 @@ body {
 }
 .search-bar{
   width: 100%;
-  text-align: center; 
 }
 
 /* Search Section Styling */
 .search-section {
   width: 50%; /* Set width to half of the page */
+  max-width: 400px; /* Limit the maximum width */
   margin: 0 auto; /* Center-align the section */
   margin-bottom: 20px;
   text-align: center; /* Center-align the content inside the section */
@@ -67,10 +66,13 @@ body {
 /* Table Section Styling */
 .table-section {
   width: 100%;
+  max-width: 600px; /* Limit the maximum width */
+  margin: 0 auto; /* Center-align the section */
   text-align: center;
 }
 
 .table-section table {
+  text-align: center;
   margin: auto;
   border-collapse: collapse;
   border: 1px solid #555555; /* Darker borders */
@@ -117,4 +119,38 @@ body {
     font-size: 14px;
     padding: 8px;
   }
+}
+
+/* Navbar styling */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: #2c5e75;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #b7d1e9;
+  text-decoration: underline;
 }

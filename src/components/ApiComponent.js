@@ -3,7 +3,7 @@ import axios from "axios";
 import CityForm from "./CityForm";
 import WeatherTable from "./WeatherTable";
 import config from "./config";
-import "./styles/App.css";
+import "./../styles/App.css";
 
 const ApiComponent = () => {
   const [city, setCity] = useState("");
@@ -31,7 +31,8 @@ const ApiComponent = () => {
   return (
     <div className="weather-app">
       <header className="header">
-        <h1>Weather Data</h1>
+        
+        <h1>Weather App</h1>
       </header>
       <div className="search-bar"><section className="search-section">
         <CityForm city={city} onCityChange={handleInputChange} />

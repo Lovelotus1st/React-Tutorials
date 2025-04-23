@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles/WeatherTable.css";
+import "./../styles/WeatherTable.css";
 
 const WeatherTable = ({ weatherData }) => {
   return (
-    <table border="1" style={{ borderCollapse: "collapse", width: "60%", margin: "auto" }}>
+    <table border="1" style={{ borderCollapse: "collapse", width: "100%", margin: "auto" }}>
       <thead>
         <tr>
           <th>Field</th>
