@@ -1,21 +1,25 @@
 import React, { useState } from "react";
+import Confetti from "react-confetti";
 
 const TicTacToe = () => {
-  const [board, setBoard] = useState(Array(9).fill(null)); // Game board
-  const [isXNext, setIsXNext] = useState(true); // Track who's next
-  const [winner, setWinner] = useState(null); // Store the winner
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [isXNext, setIsXNext] = useState(true);
+  const [winner, setWinner] = useState(null);
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   const handleClick = (index) => {
-    if (board[index] || winner) return; // Prevent further clicks if square is filled or a winner exists
+    if (board[index] || winner) return;
     const newBoard = [...board];
-    newBoard[index] = isXNext ? "X" : "O"; // Update the board
+    newBoard[index] = isXNext ? "X" : "O";
     setBoard(newBoard);
-    setIsXNext(!isXNext); // Switch turns
+    setIsXNext(!isXNext);
     const gameWinner = calculateWinner(newBoard);
-    setWinner(gameWinner); // Check for winner
-    if (!gameWinner && newBoard.every((square) => square !== null)) {
-      // Auto-reset for a draw
-      setTimeout(resetGame, 1000); // Slight delay before reset
+    if (gameWinner) {
+      setWinner(gameWinner);
+      sleep(5000).then(() => {
+        alert(`Player ${gameWinner} wins!`);
+        resetGame();
+      });
     }
   };
 
@@ -40,21 +44,16 @@ const TicTacToe = () => {
   };
 
   const resetGame = () => {
-    setBoard(Array(9).fill(null)); // Reset board
-    setIsXNext(true); // Reset to X's turn
-    setWinner(null); // Clear winner
+    setBoard(Array(9).fill(null));
+    setIsXNext(true);
+    setWinner(null);
   };
-
-  const status = winner
-    ? `Winner: ${winner}`
-    : board.every((square) => square !== null)
-    ? "Draw! Resetting..."
-    : `Next player: ${isXNext ? "X" : "O"}`;
 
   return (
     <div className="TicTacToe">
       <h2>Tic-Tac-Toe</h2>
-      <p>{status}</p>
+      {winner && <Confetti />}
+      <p>{winner ? `Winner: ${winner}` : `Next player: ${isXNext ? "X" : "O"}`}</p>
       <div style={boardStyle}>
         {board.map((value, index) => (
           <button
@@ -66,7 +65,7 @@ const TicTacToe = () => {
           </button>
         ))}
       </div>
-      <button onClick={resetGame}  className="reset-button" style={{ marginTop: "20px" }}>
+      <button onClick={resetGame} className="reset-button" style={{ marginTop: "20px" }}>
         Reset Game
       </button>
     </div>
