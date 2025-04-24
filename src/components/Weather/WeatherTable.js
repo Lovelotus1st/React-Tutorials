@@ -3,16 +3,10 @@ import "./../../styles/WeatherTable.css";
 
 const WeatherTable = ({ weatherData }) => {
   return (
-    <table border="1" style={{ borderCollapse: "collapse", width: "100%", margin: "auto" }}>
-      <thead>
-        <tr>
-          <th>Field</th>
-          <th>Value</th>
-        </tr>
-      </thead>
+    <table className="weather-table">
       <tbody>
         <tr>
-          <td>Search</td>
+          <td>Location</td>
           <td>{weatherData.location.name}</td>
         </tr>
         <tr>

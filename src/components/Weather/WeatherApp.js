@@ -74,7 +74,7 @@ const WeatherApp = () => {
           placeholderText={"Enter zip or city Name"}
         />
       </section>
-      <section className="table-section">
+      <section className="weather-section">
         {/* Loading or WeatherTable */}
         {loading && <p>Updating...</p>}
         {weatherData ? (

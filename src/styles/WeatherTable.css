@@ -1,31 +1,46 @@
 /* WeatherTable.css */
+.weather-table {
+  width: 100%;
+  max-width: 600px; /* Limit the maximum width */
+  margin: 0 auto; /* Center-align the section */
+  text-align: center;
+  background-color: #0d0d0e33;
+  border-radius: 5%;
+}
+
+.weather-section {
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
 table {
     border-collapse: collapse;
     width: auto; /* Adjust width to fit content */
     margin-left: 0; /* Align table to the left */
-    border: 1px solid #ddd;
     font-family: Arial, sans-serif;
   }
   
   thead th {
-    background-color: #f9f9f9;
-    padding: 5px;
-    text-align: left;
-    border-bottom: 2px solid #ccc;
+    color: #e0e0e0; /* Light text */
+    border-bottom: 2px solid #5d9ebd; /* Cyan border for separation */
   }
   
   tbody td {
-    padding: 5px;
+    padding: 5px 20px;
     text-align: left; /* Align text to the left */
-    border-bottom: 1px solid #eee;
+    
   }
   
   tbody tr:nth-child(even) {
-    background-color: #f4f4f4; /* Subtle alternate row color */
+    background-color: #33333399; /* Slightly lighter for alternating rows */
   }
   
   tbody tr:hover {
-    background-color: #e6f7ff; /* Highlight row on hover */
+  background-color: #7199bd; /* Highlight on hover with blue */
+  color: #ffffff; /* White text on hover */
   }
   
   th, td {
