@@ -15,6 +15,11 @@ const Navbar = () => {
             Weather
           </Link>
         </li>
+        <li style={navItemStyle}>
+          <Link to="/games">
+            Games
+          </Link>
+        </li>
       </ul>
     </nav>
   );
